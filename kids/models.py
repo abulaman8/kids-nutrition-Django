@@ -25,6 +25,6 @@ class Image(models.Model):
     image_url = models.URLField(null=False, blank=False)
     created_on = models.DateTimeField(null=False, blank=False, auto_now_add=True, editable=False)
     updated_on = models.DateTimeField(null=False, blank=False)
-    is_approved = models.BooleanField(default=False, null=False, blank=False)
+    is_approved = models.BooleanField(default=True, null=False, blank=False)
     approoved_by = models.CharField(max_length=100, null=False, blank=False)
     food_group = models.CharField(choices=CHOICES, default='UNKNOWN', max_length=15)
